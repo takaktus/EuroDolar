@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="AtvN&#250;meros"/>
+        <attribute name="authors" value="felipe.mtakaki"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-08 05:28:42 "/>
+        <attribute name="created" value="ZmVsaXBlLm10YWtha2k7U0FOMDcxNzQ2N1cxMS0xOzIwMjUtMDUtMDg7IjAyOjU0OjA3ICI7MzQ4MQ=="/>
+        <attribute name="edited" value="ZmVsaXBlLm10YWtha2k7U0FOMDcxNzQ2N1cxMS0xOzIwMjUtMDUtMDg7IjA1OjI4OjQyICI7MTszNTky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numUm, numDois, contador" type="Integer" array="False" size=""/>
+            <output expression="&quot;Irei mostrar todos on n&#250;meros entre o primeiro e o segundo n&#250;mero digitado&quot;" newline="True"/>
+            <input variable="numUm"/>
+            <output expression="&quot;E o segundo n&#250;mero?&quot;" newline="True"/>
+            <input variable="numDois"/>
+            <if expression="numUm&gt;numDois">
+                <then>
+                    <output expression="&quot;Inv&#225;lido, escreva novamente&quot;" newline="True"/>
+                    <input variable="numUm"/>
+                    <input variable="numDois"/>
+                </then>
+                <else/>
+            </if>
+            <for variable="contador" start="numUm + 1" end="numDois - 1" direction="inc" step="1">
+                <if expression="contador%2 == 0">
+                    <then>
+                        <output expression="contador &amp; &quot; PAR&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="contador &amp; &quot; &#205;MPAR&quot;" newline="True"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Obrigado&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
